@@ -1,0 +1,44 @@
+@mixin font-dpr($font-size){
+    font-size: $font-size;
+
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}
+
+@mixin clearF{   
+    &:after{
+        display:block;
+        clear:both;
+        content:"";
+        visibility:hidden;
+        height:0;
+    }
+}
+
+
+
+@function pxrem($norSize){
+    @return $norSize/$baseSize * 1rem;
+}
+
+//@function clacRest($reset){
+//  @return calc(100% - pxrem($reset));
+//}
+
+@mixin btnWH($w,$h){
+    width:pxrem($w);
+    height:pxrem($h);
+    line-height: pxrem($h);
+    border-radius: pxrem($h/2);
+    
+}
+Element {
+    appearance:none;
+    tap-highlight-color:rgba(255,255,255,0);
+    border-width:thin;
+}

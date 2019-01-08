@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <title>test</title>
+    <script src="../static/js/flexbile.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../static/icon/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/index.min.css?t=33312345" />
+</head>
+
+<body>
+    <div class="wrap myHome">
+        <div class="bg-box">
+            test
+        </div>>
+    </div>
+<div class="panel dialog commit-active" id="regPhone">
+    <div onclick="closeDialog('regPhone')" class="close">
+        <i class="icon iconfont el-wh-close"></i>
+    </div>
+    <div class="panel-title">
+        <span class="title">
+            test
+        </span>
+    </div>
+    <div class="panel-body">
+        <div class="err-tips"></div>
+        <ul>
+            <li><input type='number' pattern="[0-9]*"/ id="phone" autofocus="autofocus" placeholder="手机号" /></li>
+            <li><input type='number' pattern="[0-9]*"/ oninput="if(value.length>6)value=value.slice(0,6)" id="validate"
+                    class="shortCut" placeholder="验证码" /><span id="getVali" class="count-down">获取验证码</span></li>
+        </ul>
+    </div>
+    <div class="panel-footer">
+        <div class="btn-lg btn red" onclick="commitPhone()">
+            确定
+        </div>
+        <div class="remark">
+            test error
+        </div>
+    </div>
+</div>
+    <div id="tips">
+        <span></span>
+    </div>
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <script src="../static/js/unit.js?t=33312345" type="text/javascript" charset="utf-8"></script>
+    <script>
+        function commitPhone(){
+            closeDialog('regPhone');
+        }
+    </script>
+</body>
+
+</html>
